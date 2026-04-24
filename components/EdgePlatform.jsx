@@ -169,12 +169,7 @@ export default function EdgePlatform() {
                   strokeWidth="1"
                   strokeDasharray={v === 0 ? '0' : '3 4'}
                 />
-                <text
-                  x={PAD_L - 10}
-                  y={yFor(v) + 4}
-                  className="chart-axis-label"
-                  textAnchor="end"
-                >
+                <text x={PAD_L - 10} y={yFor(v) + 4} className="chart-axis-label" textAnchor="end">
                   {v}
                 </text>
               </g>
@@ -246,12 +241,7 @@ export default function EdgePlatform() {
                 r="5"
                 fill="#E89B3C"
               />
-              <circle
-                cx={xFor(cursorHour)}
-                cy={yFor(ashwanovaAt(cursorHour))}
-                r="2"
-                fill="#fff"
-              />
+              <circle cx={xFor(cursorHour)} cy={yFor(ashwanovaAt(cursorHour))} r="2" fill="#fff" />
               <g transform={`translate(${xFor(cursorHour)}, ${H - PAD_B + 2})`}>
                 <rect x="-14" y="0" width="28" height="18" rx="9" fill="#2D1F0F" />
                 <text

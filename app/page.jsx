@@ -1,5 +1,7 @@
+import RegulatoryBanner from '@/components/RegulatoryBanner';
 import Nav from '@/components/Nav';
 import Hero from '@/components/Hero';
+import RegulatoryMoment from '@/components/RegulatoryMoment';
 import Problem from '@/components/Problem';
 import Meet from '@/components/Meet';
 import WhyRootOnly from '@/components/WhyRootOnly';
@@ -15,9 +17,11 @@ import Footer from '@/components/Footer';
 export default function Page() {
   return (
     <>
+      <RegulatoryBanner />
       <Nav />
       <main>
         <Hero />
+        <RegulatoryMoment />
         <Problem />
         <Meet />
         <WhyRootOnly />

@@ -24,9 +24,19 @@ export function useReveal(threshold = 0.2) {
 }
 
 export function useCountUp(target, shown, duration = 1400) {
-  const [val, setVal] = useState(0);
+  const [val, setVal] = useState(target); // default to target — fallback-safe
+  const hasAnimated = useRef(false);
   useEffect(() => {
-    if (!shown) return;
+    if (!shown || hasAnimated.current) return;
+    const reduced =
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) {
+      setVal(target);
+      return;
+    }
+    hasAnimated.current = true;
+    setVal(0);
     const start = performance.now();
     let raf;
     const tick = (now) => {
@@ -34,6 +44,7 @@ export function useCountUp(target, shown, duration = 1400) {
       const eased = 1 - Math.pow(1 - t, 3);
       setVal(target * eased);
       if (t < 1) raf = requestAnimationFrame(tick);
+      else setVal(target);
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);

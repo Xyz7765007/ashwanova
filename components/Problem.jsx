@@ -20,8 +20,7 @@ export default function Problem() {
     {
       num: 600,
       suffix: 'mg',
-      label:
-        'the standard daily dose of legacy ashwagandha extracts — yet stress and sleep complaints persist',
+      label: 'the standard daily dose of legacy ashwagandha extracts — yet stress and sleep complaints persist',
       cap: 'Industry benchmark dose',
     },
   ];

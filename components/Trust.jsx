@@ -21,25 +21,15 @@ export default function Trust() {
     { name: 'EU', x: 500, y: 165, status: 'granted', detail: 'EFSA-compatible registration' },
   ];
   const partners = [
-    'VITA LABS',
-    'NORDIC BOTANICA',
-    'SEABRIGHT PHARMA',
-    'KINDRED CO.',
-    'RELM NUTRITION',
-    'BLUEFINCH',
-    'HAMMONDS & SOUL',
-    'TERRAFORM',
-    'NORTHRIDGE',
-    'ROOT STUDIO',
+    'VITA LABS', 'NORDIC BOTANICA', 'SEABRIGHT PHARMA', 'KINDRED CO.', 'RELM NUTRITION',
+    'BLUEFINCH', 'HAMMONDS & SOUL', 'TERRAFORM', 'NORTHRIDGE', 'ROOT STUDIO',
   ];
 
   return (
     <section className="section-pad trust-wrap">
       <div className="container" style={{ position: 'relative' }}>
         <div style={{ textAlign: 'center' }}>
-          <span className="eyebrow" style={{ color: 'var(--coffee-700)' }}>
-            TRUSTED GLOBALLY
-          </span>
+          <span className="eyebrow" style={{ color: 'var(--coffee-700)' }}>TRUSTED GLOBALLY</span>
           <h2
             className="display-l"
             style={{ marginTop: 20, color: 'var(--coffee-900)', textWrap: 'balance' }}
@@ -48,12 +38,7 @@ export default function Trust() {
           </h2>
           <p
             className="body-l"
-            style={{
-              marginTop: 24,
-              color: 'var(--coffee-700)',
-              maxWidth: 640,
-              margin: '24px auto 0',
-            }}
+            style={{ marginTop: 24, color: 'var(--coffee-700)', maxWidth: 640, margin: '24px auto 0' }}
           >
             Patented in key markets. Standardized to USP. GRAS self-affirmed. Vegan-friendly.
             Pharma-grade from raw material to final dose.
@@ -63,13 +48,7 @@ export default function Trust() {
         <div className="certs-row">
           {certs.map((c) => (
             <span key={c} className="cert">
-              <svg
-                className="cert-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-              >
+              <svg className="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <circle cx="12" cy="12" r="10" />
                 <path d="M8 12l3 3 5-6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -88,9 +67,7 @@ export default function Trust() {
         <div className="marquee" aria-hidden="true">
           <div className="marquee-track">
             {[...partners, ...partners].map((p, i) => (
-              <span key={i} className="marquee-item">
-                {p}
-              </span>
+              <span key={i} className="marquee-item">{p}</span>
             ))}
           </div>
         </div>
@@ -134,10 +111,7 @@ function WorldMap({ markers }) {
             cy={m.y}
             r={m.status === 'granted' ? 10 : 8}
             fill={m.status === 'granted' ? 'rgba(232,155,60,0.25)' : 'rgba(212,160,76,0.2)'}
-            style={{
-              animationDelay: `${i * 0.25}s`,
-              transformOrigin: `${m.x}px ${m.y}px`,
-            }}
+            style={{ animationDelay: `${i * 0.25}s`, transformOrigin: `${m.x}px ${m.y}px` }}
           />
           <circle
             cx={m.x}
@@ -150,25 +124,10 @@ function WorldMap({ markers }) {
           {hover === i && (
             <g>
               <rect x={m.x - 70} y={m.y - 52} width="140" height="38" rx="8" fill="#2D1F0F" />
-              <text
-                x={m.x}
-                y={m.y - 34}
-                textAnchor="middle"
-                fontSize="11"
-                fill="#FAF6EE"
-                fontFamily="var(--font-display)"
-                fontWeight="600"
-              >
+              <text x={m.x} y={m.y - 34} textAnchor="middle" fontSize="11" fill="#FAF6EE" fontFamily="var(--font-display)" fontWeight="600">
                 {m.name} — {m.status === 'granted' ? 'GRANTED' : 'PENDING'}
               </text>
-              <text
-                x={m.x}
-                y={m.y - 20}
-                textAnchor="middle"
-                fontSize="9"
-                fill="rgba(250,246,238,0.7)"
-                fontFamily="var(--font-mono)"
-              >
+              <text x={m.x} y={m.y - 20} textAnchor="middle" fontSize="9" fill="rgba(250,246,238,0.7)" fontFamily="var(--font-mono)">
                 {m.detail}
               </text>
             </g>
@@ -178,27 +137,9 @@ function WorldMap({ markers }) {
 
       <g transform="translate(40, 450)">
         <circle cx="6" cy="6" r="5" fill="#E89B3C" />
-        <text
-          x="18"
-          y="10"
-          fontSize="11"
-          fill="#6B4F2A"
-          fontFamily="var(--font-mono)"
-          letterSpacing="0.08em"
-        >
-          GRANTED
-        </text>
+        <text x="18" y="10" fontSize="11" fill="#6B4F2A" fontFamily="var(--font-mono)" letterSpacing="0.08em">GRANTED</text>
         <circle cx="110" cy="6" r="4" fill="#D4A04C" />
-        <text
-          x="122"
-          y="10"
-          fontSize="11"
-          fill="#6B4F2A"
-          fontFamily="var(--font-mono)"
-          letterSpacing="0.08em"
-        >
-          PENDING
-        </text>
+        <text x="122" y="10" fontSize="11" fill="#6B4F2A" fontFamily="var(--font-mono)" letterSpacing="0.08em">PENDING</text>
       </g>
     </svg>
   );

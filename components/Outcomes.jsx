@@ -6,36 +6,12 @@ import Icon from './Icon';
 export default function Outcomes() {
   const [ref, shown] = useReveal(0.15);
   const benefits = [
-    {
-      icon: <Icon.Shield />,
-      title: 'Stress Relief',
-      body: 'Up to 41.6% reduction in PSS-10 perceived stress scores.',
-    },
-    {
-      icon: <Icon.Smile />,
-      title: 'Mood Elevation',
-      body: 'Significant improvement in Oxford Happiness Questionnaire scores.',
-    },
-    {
-      icon: <Icon.Moon />,
-      title: 'Sleep Quality',
-      body: 'PSQI scores improved into the normal range (<5).',
-    },
-    {
-      icon: <Icon.Heart />,
-      title: 'Emotional Resilience',
-      body: 'Greater capacity to recover from daily stressors.',
-    },
-    {
-      icon: <Icon.Brain />,
-      title: 'Cognitive Clarity & Focus',
-      body: 'Validated improvements via CANTAB memory and attention tests.',
-    },
-    {
-      icon: <Icon.Plate />,
-      title: 'Healthier Eating Behavior',
-      body: 'Reduction in stress-driven eating, measured via Three Factor Eating Questionnaire.',
-    },
+    { icon: <Icon.Shield />, title: 'Stress Relief', body: 'Up to 41.6% reduction in PSS-10 perceived stress scores.' },
+    { icon: <Icon.Smile />, title: 'Mood Elevation', body: 'Significant improvement in Oxford Happiness Questionnaire scores.' },
+    { icon: <Icon.Moon />, title: 'Sleep Quality', body: 'PSQI scores improved into the normal range (<5).' },
+    { icon: <Icon.Heart />, title: 'Emotional Resilience', body: 'Greater capacity to recover from daily stressors.' },
+    { icon: <Icon.Brain />, title: 'Cognitive Clarity & Focus', body: 'Validated improvements via CANTAB memory and attention tests.' },
+    { icon: <Icon.Plate />, title: 'Healthier Eating Behavior', body: 'Reduction in stress-driven eating, measured via Three Factor Eating Questionnaire.' },
   ];
   return (
     <section className="section-pad">
@@ -49,12 +25,7 @@ export default function Outcomes() {
           </h2>
           <p
             className="body-l"
-            style={{
-              marginTop: 24,
-              color: 'var(--coffee-700)',
-              maxWidth: 640,
-              margin: '24px auto 0',
-            }}
+            style={{ marginTop: 24, color: 'var(--coffee-700)', maxWidth: 640, margin: '24px auto 0' }}
           >
             Clinically substantiated benefits — measured across multiple validated assessment tools.
           </p>

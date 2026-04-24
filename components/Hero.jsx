@@ -19,7 +19,6 @@ export default function Hero() {
     return () => clearTimeout(t);
   }, []);
 
-  // Cursor parallax + glow
   useEffect(() => {
     const onMove = (e) => {
       const rect = wrapRef.current?.getBoundingClientRect();
@@ -41,7 +40,6 @@ export default function Hero() {
     return () => window.removeEventListener('pointermove', onMove);
   }, []);
 
-  // Scroll-driven exit
   useEffect(() => {
     const onScroll = () => {
       const y = window.scrollY;
@@ -74,7 +72,7 @@ export default function Hero() {
         <div className="hero-text" ref={textRef}>
           <Scramble
             className={`eyebrow hero-eyebrow ${mounted ? 'in' : ''}`}
-            text="ASHWANOVA™ — STRESS & SLEEP"
+            text="ASHWANOVA™ — ROOT-ONLY ASHWAGANDHA"
             delay={400}
           />
           <h1
@@ -86,7 +84,7 @@ export default function Hero() {
                 'opacity 900ms var(--ease-out) 600ms, transform 900ms var(--ease-out) 600ms',
             }}
           >
-            <ScrambleHeadline text="All-day calm. One small dose." active={mounted} />
+            <ScrambleHeadline text="Root-only. Regulation-ready. Clinically proven." active={mounted} />
           </h1>
           <p
             className="body-l hero-sub"
@@ -95,10 +93,13 @@ export default function Hero() {
               transform: mounted ? 'translateY(0)' : 'translateY(16px)',
               transition:
                 'opacity 700ms var(--ease-out) 1200ms, transform 700ms var(--ease-out) 1200ms',
+              maxWidth: 520,
+              fontSize: '15px',
             }}
           >
-            A clinically-backed, root-only ashwagandha extract. Sustained release. Clean label. 24
-            hours of calm in a single small dose.
+            The only ashwagandha extract built for what the market now demands. USP-standardised
+            root extract, sustained 24-hour release, clinical proof at 150mg — engineered for brand
+            owners who can&apos;t afford regulatory risk.
           </p>
           <div
             className="hero-ctas"
@@ -109,13 +110,25 @@ export default function Hero() {
                 'opacity 600ms var(--ease-out) 1500ms, transform 600ms var(--ease-out) 1500ms',
             }}
           >
-            <a href="#cta" className="btn btn-primary btn-lg">
-              Request a Sample <Icon.ArrowRight className="arrow" />
+            <a
+              href="https://www.nutriventia.com/contact-us/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary btn-lg"
+            >
+              Contact Us <Icon.ArrowRight className="arrow" />
             </a>
             <a href="#science" className="btn btn-ghost-dark btn-lg">
               <Icon.Play /> Watch the Science
             </a>
           </div>
+          <a
+            href="/formula-check.html"
+            className="hero-compliance-link"
+            style={{ opacity: mounted ? 1 : 0, transition: 'opacity 500ms var(--ease-out) 1800ms' }}
+          >
+            → Is your formula still compliant? Check in 60 seconds
+          </a>
         </div>
       </div>
 

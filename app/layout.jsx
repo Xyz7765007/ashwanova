@@ -1,21 +1,21 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Ashwanova™ — All-day calm. One small dose. | Nutriventia',
+  title: 'Ashwanova™ — Root-Only Ashwagandha | Regulation-Ready Ingredient for Nutraceutical Brands',
   description:
-    'Ashwanova™ is a clinically-backed, root-only ashwagandha extract delivering 24-hour calm in one small dose. Powered by Nutriventia E.D.G.E.',
+    "The only ashwagandha extract standardized to USP, root-only, and aligned with India's Ministry of AYUSH advisory. Sustained 24-hour release. Clinical proof at 150mg. Built for brand owners who can't afford regulatory risk.",
   metadataBase: new URL('https://ashwanova.nutriventia.com'),
   openGraph: {
-    title: 'Ashwanova™ — All-day calm. One small dose.',
+    title: 'Ashwanova™ — Root-Only Ashwagandha for Nutraceutical Brands',
     description:
-      'A clinically-backed, root-only ashwagandha extract. Sustained release. Clean label. 24 hours of calm in a single small dose.',
+      "The only ashwagandha extract standardized to USP, root-only, and aligned with India's Ministry of AYUSH advisory. Sustained 24-hour release. Clinical proof at 150mg. Built for brand owners who can't afford regulatory risk.",
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ashwanova™ — All-day calm. One small dose.',
+    title: 'Ashwanova™ — Root-Only Ashwagandha for Nutraceutical Brands',
     description:
-      'A clinically-backed, root-only ashwagandha extract. Sustained release. Clean label. 24 hours of calm in a single small dose.',
+      "The only ashwagandha extract standardized to USP, root-only, and aligned with India's Ministry of AYUSH advisory. Sustained 24-hour release. Clinical proof at 150mg. Built for brand owners who can't afford regulatory risk.",
   },
 };
 

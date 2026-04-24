@@ -36,27 +36,23 @@ export default function Nav() {
           <span>
             <span className="parent">Nutriventia</span>
             <span className="wordmark">
-              Ashwanova
-              <sup style={{ fontSize: '9px', opacity: 0.6, marginLeft: 2 }}>™</sup>
+              Ashwanova<sup style={{ fontSize: '9px', opacity: 0.6, marginLeft: 2 }}>™</sup>
             </span>
           </span>
         </a>
         <div className="nav-links">
-          <a href="#why" className={active === 'why' ? 'active' : ''}>
-            Why Ashwanova
-          </a>
-          <a href="#science" className={active === 'science' ? 'active' : ''}>
-            The Science
-          </a>
-          <a href="#applications" className={active === 'applications' ? 'active' : ''}>
-            Applications
-          </a>
-          <a href="#faq" className={active === 'faq' ? 'active' : ''}>
-            FAQ
-          </a>
+          <a href="#why" className={active === 'why' ? 'active' : ''}>Why Ashwanova</a>
+          <a href="#science" className={active === 'science' ? 'active' : ''}>The Science</a>
+          <a href="#applications" className={active === 'applications' ? 'active' : ''}>Applications</a>
+          <a href="#faq" className={active === 'faq' ? 'active' : ''}>FAQ</a>
         </div>
-        <a href="#cta" className="btn btn-primary">
-          Request Sample <Icon.ArrowRight className="arrow" />
+        <a
+          href="https://www.nutriventia.com/contact-us/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-primary"
+        >
+          Contact Us <Icon.ArrowRight className="arrow" />
         </a>
         <button className="nav-burger" aria-label="Menu">
           <span />

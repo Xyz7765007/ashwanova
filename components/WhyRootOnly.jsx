@@ -9,10 +9,11 @@ export default function WhyRootOnly() {
   const leftRows = [
     'Higher withaferin-A content from leaves — flagged in some EU markets',
     'Inconsistent withanolide profile across batches',
-    'Regulatory ambiguity in Denmark, Norway, and select markets',
+    "Restricted by India's Ministry of AYUSH in ASU drugs and food supplements",
     'Mixed clinical literature on long-term safety at high doses',
   ];
   const rightRows = [
+    "Aligned with Ministry of AYUSH guidance — root-only, matching India's regulatory position on ashwagandha",
     'Standardized to ≥4% USP withanolides — root only',
     'Consistent batch-to-batch verified by LC-MS/MS',
     'GRAS self-affirmed in the U.S., aligned with FDA & EFSA',
@@ -91,8 +92,7 @@ export default function WhyRootOnly() {
         </div>
 
         <div className="pullquote">
-          &quot;Safety must be guided by science — not by including parts of the plant that
-          complicate the answer.&quot;
+          &quot;Safety must be guided by science. And now, by regulation.&quot;
           <span className="attrib">— The Ashwanova Position</span>
         </div>
       </div>
