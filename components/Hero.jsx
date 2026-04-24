@@ -182,7 +182,7 @@ function ScrambleHeadline({ text, active }) {
     rafId = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(rafId);
   }, [active, text]);
-  return <span>{display}</span>;
+  return <span style={{ fontSize: '70px' }}>{display}</span>;
 }
 
 function Scramble({ text, className, delay = 0 }) {
