@@ -1046,3 +1046,150 @@ body.has-banner .hero-content { padding-top: 160px; }
   }
   .hero-glow, .ember-particles, .capsule-stage .particle, .hero-scroll .line { display: none; }
 }
+
+/* ============================================================
+   MOBILE — comprehensive overrides for < 760px
+   ============================================================ */
+@media (max-width: 760px) {
+  /* Prevent accidental horizontal overflow everywhere */
+  html, body { overflow-x: hidden; max-width: 100vw; }
+
+  /* Container padding tightens on mobile */
+  .container { padding: 0 20px; }
+
+  /* ---- Type scale ---- */
+  .display-xl { font-size: clamp(40px, 11vw, 56px); line-height: 1.06; letter-spacing: -0.022em; }
+  .display-l  { font-size: clamp(34px, 9vw, 44px); line-height: 1.1; }
+  .display-m  { font-size: clamp(30px, 8vw, 38px); line-height: 1.12; }
+  .h1 { font-size: clamp(26px, 7vw, 34px); line-height: 1.18; }
+  .h2 { font-size: clamp(22px, 6vw, 28px); line-height: 1.22; }
+  .h3 { font-size: 22px; line-height: 1.28; }
+  .h4 { font-size: 19px; line-height: 1.32; }
+  .body-l { font-size: 16px; line-height: 1.55; }
+  .data-xl { font-size: clamp(48px, 14vw, 64px); }
+  .data-l  { font-size: clamp(36px, 10vw, 44px); }
+
+  /* ---- Section padding ---- */
+  .section-pad    { padding-top: 72px; padding-bottom: 72px; }
+  .section-pad-lg { padding-top: 88px; padding-bottom: 88px; }
+
+  /* ---- Regulatory banner ---- */
+  .reg-banner { height: auto; min-height: 56px; padding: 8px 0; }
+  .reg-banner-inner { flex-wrap: wrap; gap: 8px; padding: 0 16px; }
+  .reg-banner-text { white-space: normal; font-size: 12px; line-height: 1.4; }
+  .reg-banner-left { flex: 1 1 100%; }
+  .reg-banner-right { gap: 12px; margin-left: auto; }
+  .reg-banner-link { font-size: 12px; }
+  .reg-banner-link span, .reg-banner-link svg { }
+  body.has-banner .nav { top: 56px !important; }
+
+  /* ---- Nav ---- */
+  .nav { height: 60px; }
+  .nav.scrolled { height: 52px; }
+  .nav-logo .wordmark { font-size: 15px; }
+  .nav-logo .parent { font-size: 10px; }
+  .nav-logo .mark { width: 24px; height: 24px; }
+
+  /* ---- Hero ---- */
+  .hero { min-height: 640px; height: auto; min-height: 100svh; }
+  .hero-content { padding: 100px 20px 40px !important; align-items: flex-start !important; }
+  body.has-banner .hero-content { padding-top: 120px !important; }
+  .hero-text { max-width: 100%; }
+  .hero .display-xl { font-size: clamp(36px, 9.5vw, 48px) !important; line-height: 1.05 !important; }
+  .hero-eyebrow { font-size: 11px; }
+  .hero-sub { font-size: 14px !important; line-height: 1.5 !important; max-width: 100% !important; margin-top: 20px !important; }
+  .hero-ctas { margin-top: 24px; gap: 10px; width: 100%; }
+  .hero-ctas .btn { flex: 1 1 auto; justify-content: center; }
+  .hero-ctas .btn-lg { padding: 13px 18px; font-size: 13px; }
+  .hero-compliance-link { font-size: 12px; margin-top: 16px; }
+  .hero-scroll { display: none; }
+
+  /* ---- Buttons ---- */
+  .btn-lg { padding: 14px 22px; font-size: 14px; }
+
+  /* ---- Regulatory moment ---- */
+  .reg-moment-grid { gap: 40px; }
+  .reg-moment-right { padding: 8px 0; }
+  .timeline { gap: 28px; padding-left: 28px; }
+  .reg-moment-emphasis { font-size: 16px; }
+
+  /* ---- Stat grid, two-col, feature grid ---- */
+  .stat-grid { gap: 16px; margin-top: 48px; }
+  .two-col { gap: 40px; }
+  .feature-grid { gap: 16px; margin-top: 56px; }
+  .feature-card { padding: 28px; }
+
+  /* ---- Capsule stage (Meet Ashwanova) ---- */
+  .capsule-stage { aspect-ratio: 1 / 0.9; max-width: 100%; margin: 0 auto; }
+
+  /* ---- Compare cards (Why root-only) ---- */
+  .compare-grid { gap: 20px; }
+  .compare-card { padding: 32px 24px; border-radius: var(--radius-lg); }
+  .compare-card.left, .compare-card.right { margin: 0; }
+  .pullquote { margin-top: 56px; font-size: 20px !important; line-height: 1.4 !important; padding: 0 8px; }
+
+  /* ---- E.D.G.E. chart ---- */
+  .chart-wrap { padding: 24px 16px; margin-top: 48px; border-radius: var(--radius-md); }
+  .chart-head { flex-direction: column; gap: 16px; margin-bottom: 20px; }
+  .chart-legend { gap: 16px; }
+  .chart-values { width: 100%; justify-content: space-between; gap: 12px; }
+  .chart-value { flex: 1; padding: 10px 14px; }
+  .chart-value .num { font-size: 18px; }
+  .chart-svg { overflow: visible; }
+
+  /* ---- Clinical (dark) ---- */
+  .study-grid { gap: 16px; margin-top: 48px; }
+  .study-card { padding: 32px 24px; }
+  .meta-stats { grid-template-columns: repeat(2, 1fr) !important; gap: 24px 16px; margin-top: 64px; padding-top: 40px; }
+
+  /* ---- Benefits (Outcomes) ---- */
+  .benefit-grid { grid-template-columns: 1fr !important; gap: 16px; margin-top: 48px; }
+  .benefit-card { padding: 28px; }
+  .benefit-card h3 { font-size: 20px; }
+
+  /* ---- Applications: horizontal scroll already defined at 640; ensure good padding ---- */
+  .apps-row { margin-top: 48px; }
+
+  /* ---- Trust ---- */
+  .certs-row { gap: 20px 24px; margin-top: 40px; }
+
+  /* ---- FAQ ---- */
+  .faq-q { padding: 20px 22px; font-size: 15px; gap: 16px; }
+  .faq-item .faq-a { padding: 0 22px 22px !important; font-size: 14px; }
+
+  /* ---- Final CTA ---- */
+  .final-cta .sub { font-size: 16px; }
+  .final-cta-link { font-size: 13px; margin-top: 24px; display: inline-block; }
+
+  /* ---- Footer ---- */
+  .footer { padding: 56px 0 32px; }
+  .footer-top { gap: 40px; }
+  .footer-bottom { flex-direction: column; margin-top: 40px; padding-top: 24px; gap: 12px; }
+  .footer-bottom-links { flex-wrap: wrap; gap: 16px; }
+  .footer-tagline { max-width: 100%; }
+
+  /* ---- Timeline markers: keep inside container on very narrow screens ---- */
+  .timeline-marker { left: -24px; width: 8px; height: 8px; }
+
+  /* ---- Any SVG-heavy visualizations: allow them to shrink ---- */
+  svg { max-width: 100%; height: auto; }
+
+  /* ---- Section blends: shrink so they don't dominate small sections ---- */
+  .blend-cream-to-ember, .blend-ember-to-cream { height: 120px; }
+  .dark .dark-rim-top, .dark .dark-rim-bot { height: 140px; }
+}
+
+/* Extra-tight overrides for very small phones */
+@media (max-width: 420px) {
+  .container { padding: 0 16px; }
+  .display-xl { font-size: 36px; }
+  .hero .display-xl { font-size: 34px !important; line-height: 1.06 !important; }
+  .hero-sub { font-size: 13px !important; }
+  .hero-ctas { flex-direction: column; }
+  .hero-ctas .btn { width: 100%; }
+  .compare-card { padding: 28px 20px; }
+  .feature-card, .benefit-card, .study-card { padding: 24px 20px; }
+  .reg-banner-link { font-size: 11px; }
+  .reg-banner-right { gap: 8px; }
+  .meta-stats { grid-template-columns: 1fr !important; }
+}
